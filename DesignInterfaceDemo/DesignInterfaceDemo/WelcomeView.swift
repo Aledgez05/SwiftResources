@@ -4,10 +4,10 @@ public struct WelcomeView: View {
     public init() {}
 
     public var body: some View {
-        // ZStack para demostrar superposición de capas (fondo y contenido)
+        // ZStack para demostrar superposicion de capas (fondo y contenido)
         NavigationStack {
             ZStack {
-                // Capa de fondo con un degradado rosado suave
+                // Capa de fondo con degradado rosado suave
                 LinearGradient(
                     colors: [Color.pink.opacity(0.15), Color.pink.opacity(0.1)],
                     startPoint: .topLeading,
@@ -15,11 +15,11 @@ public struct WelcomeView: View {
                 )
                 .ignoresSafeArea()
 
-                // Capa de contenido principal apilada verticalmente
+                // Capa de contenido principal apilada vertical
                 VStack(spacing: 16) {
                     Spacer()
 
-                    // Sección: Icono de perfil (pfp) fijo, solo display
+                    // Icono de perfil (pfp) fijo
                     ZStack {
                         Circle()
                             .fill(Color.pink.opacity(0.2))
@@ -32,7 +32,7 @@ public struct WelcomeView: View {
                     }
                     .padding(.bottom, 8)
 
-                    // Sección: Títulos y subtítulos de bienvenida
+                    // titulos y contenidos verticales, agregar o quitar a gusto(:
                     VStack(spacing: 6) {
                         Text("Bienvenido a mi app")
                             .font(.largeTitle.bold())
@@ -49,15 +49,17 @@ public struct WelcomeView: View {
                     }
                     .padding(.horizontal)
 
-                    // Sección: Acción principal
+                    // flujo d la app
                     NavigationLink {
+                        //de welcome a vista
                         ProfileCardView()
                     } label: {
                         Text("Continuar")
                             .frame(maxWidth: .infinity)
                     }
+                    //formato del boton
                     .buttonStyle(.borderedProminent)
-                    .tint(.pink) // color rosado para el botón
+                    .tint(.pink) 
                     .controlSize(.large)
                     .padding(.top, 8)
 
