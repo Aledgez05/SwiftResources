@@ -3,7 +3,7 @@
 //  DesignInterfaceDemo
 //
 //  Created by CETYS Universidad  on 26/03/26.
-//
+//  by Aicia Jordan & Aejandra Dominguez 
 
 
 import SwiftUI
@@ -15,7 +15,7 @@ struct ProfileCardView: View {
 
     var body: some View {
 
-        // tarjeta blanca con acentos rosas
+        // tarjeta blanca con acentos rosas, v de vertical
         VStack(spacing: 12) {
 
             // imagen perfil
@@ -26,17 +26,21 @@ struct ProfileCardView: View {
 
             // nombre
             Text("Alejandra")
+            //modificadoress
                 .font(.title2)
                 .fontWeight(.bold)
+            //elige tus colores
                 .foregroundStyle(.pink)
 
             // descripcion
-            Text("Aprendiendo SwiftUI y diseño de interfaces")
+            Text("Hola estoy aprendiendo SwiftUI y diseño de interfaces yipiee")
                 .font(.body)
                 .multilineTextAlignment(.center)
+            //podemos combinar modificadores, como la opacidad de cierto color
                 .foregroundStyle(Color.pink.opacity(0.7))
 
         }
+        //bordes o rellenito a la vista
         .padding()
         .background(Color.white)
         .overlay(
